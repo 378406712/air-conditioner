@@ -23,8 +23,8 @@ if (!self.define) {
     if (s[t]) return;
     let o = {};
     const l = (e) => i(e, t),
-      c = { module: { uri: t }, exports: o, require: l };
-    s[t] = Promise.all(n.map((e) => c[e] || l(e))).then((e) => (r(...e), o));
+      u = { module: { uri: t }, exports: o, require: l };
+    s[t] = Promise.all(n.map((e) => u[e] || l(e))).then((e) => (r(...e), o));
   };
 }
 define(["./workbox-f3e6b16a"], function (e) {
@@ -33,16 +33,16 @@ define(["./workbox-f3e6b16a"], function (e) {
     e.clientsClaim(),
     e.precacheAndRoute(
       [
-        { url: "./assets/index-DPHx-Twy.js", revision: null },
         { url: "./assets/index-m2qoQfTy.css", revision: null },
-        { url: "./assets/Rc-x4iGsMSU.js", revision: null },
+        { url: "./assets/index-YvLXT7M5.js", revision: null },
+        { url: "./assets/Rc-ZuERFJCN.js", revision: null },
         { url: "./assets/web-vitals-BptxjviT.js", revision: null },
-        { url: "./index.html", revision: "156cf8831eda40237681a8a6d2cdcf0a" },
+        { url: "./index.html", revision: "191236e06b386c141ed6b3d4cb63a0fa" },
         { url: "./registerSW.js", revision: "1872c500de691dce40960bb85481de07" },
         { url: "./favicon.svg", revision: "2f580ef4a0c82db16f97a31b8d7d6f67" },
         { url: "./robots.txt", revision: "e232f8308190c040e3711172d401a8ac" },
         {
-          url: "manifest.webmanifest",
+          url: "./manifest.webmanifest",
           revision: "49b5c2c0de825be91249b1ceb5374f04",
         },
       ],
@@ -50,6 +50,6 @@ define(["./workbox-f3e6b16a"], function (e) {
     ),
     e.cleanupOutdatedCaches(),
     e.registerRoute(
-      new e.NavigationRoute(e.createHandlerBoundToURL("index.html"))
+      new e.NavigationRoute(e.createHandlerBoundToURL("./index.html"))
     );
 });
